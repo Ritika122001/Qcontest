@@ -3,6 +3,7 @@ package com.crio.qcontest.entities;
 import java.util.List;
 
 public class Contest {
+    
     private final String title;
     private final Level level;
     private final User createdBy;
@@ -31,6 +32,17 @@ public class Contest {
     // 2) Throw a Runtime Exception with an appropriate message if above condition is not true.
 
     private void validateQuestions(List<Question> questions, Level level) {
+        
+        for (Question question : questions) 
+        {
+            if (question.getLevel() != level) 
+            {
+            throw new RuntimeException("Error: Contest level and question level do not match.");
+            }
+
+
+            }
+
     }
 
     public String getTitle() {
@@ -64,6 +76,10 @@ public class Contest {
     // 1) Mark the status of contest as ended.
 
     public void endContest(){
+
+        this.contestStatus = ContestStatus.ENDED;
+       
+
     }
 
     @Override
