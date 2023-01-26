@@ -42,8 +42,9 @@ public class Contest {
 
 
             }
+        }
 
-    }
+
 
     public String getTitle() {
         return title;
@@ -79,11 +80,14 @@ public class Contest {
 
         this.contestStatus = ContestStatus.ENDED;
        
-
     }
 
     @Override
     public String toString() {
         return "Contest [id=" + id + "]";
+    }
+
+    public boolean isOpen() {
+        return false;
     }
 }

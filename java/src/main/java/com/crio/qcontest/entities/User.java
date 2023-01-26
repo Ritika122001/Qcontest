@@ -3,7 +3,8 @@ package com.crio.qcontest.entities;
 public class User {
     private final String name;
     private Integer totalScore;
-    private final Long id;
+    // private final Long id;
+    private Long id;
 
     public User(String name, Long id) {
         this.name = name;
@@ -27,6 +28,11 @@ public class User {
     public Long getId() {
         return id;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+    
     // TODO: CRIO_TASK_MODULE_ENTITIES
     // Complete the implementation of modifyScore method
     // Implementation must take care of the following cases:-
@@ -40,8 +46,9 @@ public class User {
         {
         throw new RuntimeException("Error: Invalid Score");
         }
-        
     }
+        
+
 
     @Override
     public String toString() {
