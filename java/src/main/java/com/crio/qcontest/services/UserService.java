@@ -25,7 +25,6 @@ public class UserService{
 
     public User createUser(String name) {
 
-        UserRepository userRepository = new UserRepository();
         User user = new User(name);
         return userRepository.save(user);
 
